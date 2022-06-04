@@ -66,43 +66,13 @@ ul li, ol li {
   list-style: none;
 }
 
-
-ul.expList {
-    padding: 0 0 4px 23px;
-}
-
-ul.expSubList {
-    padding: 0 0 4px 23px;
-}
-
-li.experience-detail {
-    list-style-Type: disc;
-    font-family: sans-serif;
-    font-size: 15px;
-    color: black;
-    list-style-image: url(../img/background/computer_chip_big.png);
-}
-
-li.experience-subpoint-detail {
-    list-style-Type: disc;
-    font-family: sans-serif;
-    font-size: 15px;
-    color: black;
-    list-style-image: url(../img/background/computer_chip_subpoint_original_2.png);
-}
-
-.align_exp_text {
-    position: relative;
-    bottom: 5px;
-}
-
 .hero-heading {
-    font-size: 48px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: capitalize;
-    line-height: 70px;
-    letter-spacing: 0.1rem;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: capitalize;
+  line-height: 70px;
+  letter-spacing: 0.1rem;
 }
 
 .hero-sub-heading {
@@ -155,6 +125,15 @@ li.experience-subpoint-detail {
     display: inline-block;
     margin-bottom: 20px;
     background-color: darkblue;
+}
+
+.page-title {
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 48px;
+    padding: 0 10px;
+    position: relative;
 }
 
 .btn {
