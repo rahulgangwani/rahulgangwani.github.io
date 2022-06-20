@@ -3,8 +3,10 @@
     "",
     "\\assets",
     "\\assets\\css",
-    "\\assets\\fonts"
+    "\\assets\\fonts",
+    "\\EyeDropper",
+    "\\EyeDropper\\assets",
+    "\\EyeDropper\\assets\\css"
   ],
-  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }

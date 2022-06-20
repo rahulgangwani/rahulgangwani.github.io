@@ -30,15 +30,121 @@
 </head>
 <body>
     <!--- Header for each project --->
-    <section id="eyedropper" class="section-padding">
+    <div id="project-area" class="project-area-bg">
+        <div class="overlay"></div>
         <div class="container">
-            <div class="page-title">
-                <h2 class="section-heading-title wow flipInX" data-wow-delay="0.4s">Medical Adherence and Liquid Level Tracking</h2>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 text-center">
+                    <div class="contents">
+                        <h5 class="script-font wow fadeInUp" data-wow-delay="0.4s">Medical Adherence and Liquid Level Tracking</h5>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!--- Project image: Might do a slideshow? --->
+    <div class="container">
+        <div class="row">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="assets/img/gallery/eyedropper-photos/eyedropper_overview_1140x400.png" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Overview</h5>
+                            <p>Eyedropper status is sent via BLE to an app, which then trasmits to the healthcare provider.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/gallery/eyedropper-photos/bottle_assembly_1140x400.png" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Assembly</h5>
+                            <p>Stacked PCB is placed in a structural skeleton surrounded by TPU filament.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/gallery/eyedropper-photos/event_detection_1140x400.png" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Event Detection</h5>
+                            <p>IMU and Capacitive Sensor data was used with MATLAB to determine when the medication was dispensed.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/gallery/eyedropper-photos/sensors_importance_1140x400.png" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Machine Learning Considerations</h5>
+                            <p>Sensor training data and use events were used to determine which sensors contributed the most to detection.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/gallery/eyedropper-photos/eyedroppers_1140x400.png" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Full Day Use Case</h5>
+                            <p>To determine reliability, multiple eyedroppers were assembled and sent out to candidates to use for the full day.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="content-area" class="description-area">
+        <div class="container">
+            <h1>Overview</h1>
+            <p>
+                <b>Glaucoma</b> is the leading cause of irreversible blindness worldwide and the third leading cause of irreversible blindness in the U.S.
+                With proper adherence monitoring systems, healthcare providers can reach out to patients and remind them to properly take their medication on time.
+                However, such adherence systems are difficult to develop due to extensive time and costs associated with getting approval from the <b>Food and Drug Administration (FDA)</b>.
+                This project helps to mitigate these costs by developing a <b>non-invasive protable sensor embedded system that would surround an FDA approved eyedropper medication.</b>
+            </p>
+            <img src="assets/img/gallery/eyedropper-photos/eyedropper_overview_1140x400.png" />
+            <p>
+               <b>Two PCBs were developed</b>, one stacked on top of the other, and placed inside a slot below the eyedropper bottle. These PCBs contained sensors and a microcontroller
+                which ran real-time classification algorithms to determine when the eyedropper medication was properly dispensed. Each use event was then sent as a package via BLE to a <b>Wi-Fi capable 
+                device</b> which parsed and redirected the packaged data to a web server for proper data logging and feedback. 
+            </p>
+            <img src="assets/img/gallery/eyedropper-photos/eyedropper_communication_1140x400.png" />
+            <h1>Hardware</h1>
+            <img src="assets/img/gallery/eyedropper-photos/eyedropper_3d_components_1140x400.png" />
+            <p>
+                The <b>skeleton structure (center)</b> was created with just enough circumference to fit an eyedropper bottle. In order to determine fluid level as well as if the bottle
+                has been squeezed, a <b>capacitor is wrapped around the structure</b>. The side of the structure also has openings to feed wires to the top, where it is attached to 
+                <b>reed switches</b>. These switches are used with the <b>magnets on the cap (right)</b> to determine when the cap is off. After assembling the PCBs and passing in the wires, 
+                a <b>sleeve (left)</b> is placed on top <b>to protect the PCBs from environmental damage</b>.
+            </p>
+            <img src="assets/img/gallery/eyedropper-photos/eyedropper_skeleton_1140x400.png" />
+            <p>
+                The challenge with the PCBs was dealing with the limited diameter. This led to the design decision to have two PCBs since there was not any limitation in height. 
+                The two PCBs would communicate data back and forth through header connectors that would also give the stacked structure of the PCBs.
+            </p>
+            <img src="assets/img/gallery/eyedropper-photos/eyedropper_pcb_stacked_1140x400.png" />
+            <p>
+                The <b>top PCB</b> contained all the components to properly interface with an <b>nRF51422 BLE microcontroller.</b> A chip antenna and RF components were used to draw out the 
+                optimal power for wireless communication. Through holes were used to pass wires from the PCB to the top to determine reed switch states.
+            </p>
+            <p>
+                The <b>bottom PCB</b> contained through holes to use wires and connect the capacitor in the inner sleeve with the <b>FDC1004 capacitance-to-digital converter</b>.
+                The PCB also had the <b>BNO080 Inertial Measurement Unit (IMU) sensor</b>, which captures any change in acceleration and tilt from the eyedropper.
+                A <b>secondary coin cell battery</b> was placed behind, which powered the two PCBs. The bottom PCB also possessed <b>logic to recharge the coin cell battery</b>, 
+                and LEDs to display charge and connection status.
+            </p>
+            <img src="assets/img/gallery/eyedropper-photos/eyedropper_pcbs_1140x400.png" />
+        </div>
+    </div>
     <!--- Link to the paper --->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="assets/js/jquery-min.js"></script>

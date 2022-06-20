@@ -115,7 +115,7 @@ ul li, ol li {
 .section-heading-title {
     font-size: 38px;
     font-weight: 700;
-    color: #1c1b1b;
+    color: #e6e6e6;
 }
 
 .section-dot-title {
@@ -310,10 +310,6 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .square-spin img {
   max-width: 30px;
-}
-
-.section-padding {
-  padding: 60px 0;
 }
 
 #about .img-thumb img {
@@ -734,40 +730,41 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 /* ==========================================================================
-3. Hero Area
+3. Project Area Header
 ========================================================================== */
-.hero-area-bg {
+.project-area-bg {
     /*background: url(../img/DSC_0899.jpg) no-repeat;*/
-    background: url(../img/background/electronics_bg1_flip.jpg) no-repeat;
+    background: url(../img/background/BlueCircuitLarge.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-#hero-area {
+#project-area {
   color: #fff;
   overflow: hidden;
   position: relative;
 }
 
-#hero-area .overlay {
+#project-area .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
   background: #0c0808;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
-#hero-area .contents {
-  padding: 375px 0px 220px;
+#project-area .contents {
+  padding: 60px 0px 60px;
 }
 
-#hero-area .contents h5 {
-  font-size: 30px;
+#project-area .contents h5 {
+  font-size: 60px;
+  font-weight: 600;
 }
 
-#hero-area .contents .head-title {
+#project-area .contents .head-title {
   color: #fff;
   font-size: 63px;
   /*letter-spacing: 2px;*/
@@ -775,7 +772,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   font-weight: 700;
 }
 
-#hero-area .contents p {
+#project-area .contents p {
   font-size: 30px;
   color: #fff;
   font-weight: 400;
@@ -783,16 +780,16 @@ a.back-to-top:hover, a.back-to-top:focus {
   margin-bottom: 25px;
 }
 
-#hero-area .contents .btn {
+#project-area .contents .btn {
   margin: 25px 0px;
   text-transform: uppercase;
 }
 
-#hero-area .banner_bottom_btn {
+#project-area .banner_bottom_btn {
   margin-top: 40px;
 }
 
-#hero-area .banner_bottom_btn i {
+#project-area .banner_bottom_btn i {
   color: #fff;
   font-size: 48px;
   -webkit-transition: all 0.2s linear;
@@ -801,7 +798,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   transition: all 0.2s linear;
 }
 
-#hero-area .banner_bottom_btn i:hover {
+#project-area .banner_bottom_btn i:hover {
   color: #ddd;
 }
 
@@ -816,6 +813,57 @@ a.back-to-top:hover, a.back-to-top:focus {
 /* ==========================================================================
   Experience Section
    ========================================================================== */
+/*.carousel-item {
+    opacity: 0.9;
+}*/
+
+.carousel {
+    position: relative;
+    padding-top: 20px;
+}
+
+.carousel img {
+    height: auto;
+    opacity: 0.5;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-indicators li{
+    background-color: gray;
+}
+
+.carousel-indicators .active {
+    background-color: black;
+}
+
+.carousel-caption {
+    color: black;
+}
+
+.carousel-caption h5 {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.carousel-caption p {
+    font-weight: 600;
+}
+
+.description-area {
+    padding: 60px 0;
+}
+
+#content-area h1 {
+    text-align: center;
+}
+
 .experience-box {
     padding-bottom: 50px;
 }
