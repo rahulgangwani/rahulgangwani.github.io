@@ -75,6 +75,10 @@ ul.expSubList {
     padding: 0 0 4px 23px;
 }
 
+ul.descSubList {
+    padding: 0 0 4px 40px;
+}
+
 li.experience-detail {
     list-style-Type: disc;
     font-family: sans-serif;
@@ -89,6 +93,14 @@ li.experience-subpoint-detail {
     font-size: 15px;
     color: black;
     list-style-image: url(../img/background/computer_chip_subpoint_original_2.png);
+}
+
+li.description-list {
+    list-style-Type: disc;
+    font-weight: 400;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #666;
+    list-style-image: url(../img/background/computer_chip_big_indent.png);
 }
 
 .align_exp_text {

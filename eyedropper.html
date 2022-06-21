@@ -104,6 +104,7 @@
     </div>
     <div id="content-area" class="description-area">
         <div class="container">
+
             <h1>Overview</h1>
             <p>
                 <b>Glaucoma</b> is the leading cause of irreversible blindness worldwide and the third leading cause of irreversible blindness in the U.S.
@@ -113,36 +114,63 @@
             </p>
             <img src="assets/img/gallery/eyedropper-photos/eyedropper_overview_1140x400.png" />
             <p>
-               <b>Two PCBs were developed</b>, one stacked on top of the other, and placed inside a slot below the eyedropper bottle. These PCBs contained sensors and a microcontroller
-                which ran real-time classification algorithms to determine when the eyedropper medication was properly dispensed. Each use event was then sent as a package via BLE to a <b>Wi-Fi capable 
-                device</b> which parsed and redirected the packaged data to a web server for proper data logging and feedback. 
+                <b>Two PCBs were developed</b>, one stacked on top of the other, and placed inside a slot below the eyedropper bottle. These PCBs contained sensors and a microcontroller
+                which ran real-time classification algorithms to determine when the eyedropper medication was properly dispensed. Each use event was then sent as a package via BLE to a <b>
+                    Wi-Fi capable
+                    device
+                </b> which parsed and redirected the packaged data to a web server for proper data logging and feedback.
             </p>
             <img src="assets/img/gallery/eyedropper-photos/eyedropper_communication_1140x400.png" />
+
             <h1>Hardware</h1>
             <img src="assets/img/gallery/eyedropper-photos/eyedropper_3d_components_1140x400.png" />
             <p>
                 The <b>skeleton structure (center)</b> was created with just enough circumference to fit an eyedropper bottle. In order to determine fluid level as well as if the bottle
-                has been squeezed, a <b>capacitor is wrapped around the structure</b>. The side of the structure also has openings to feed wires to the top, where it is attached to 
-                <b>reed switches</b>. These switches are used with the <b>magnets on the cap (right)</b> to determine when the cap is off. After assembling the PCBs and passing in the wires, 
+                has been squeezed, a <b>capacitor is wrapped around the structure</b>. The side of the structure also has openings to feed wires to the top, where it is attached to
+                <b>reed switches</b>. These switches are used with the <b>magnets on the cap (right)</b> to determine when the cap is off. After assembling the PCBs and passing in the wires,
                 a <b>sleeve (left)</b> is placed on top <b>to protect the PCBs from environmental damage</b>.
             </p>
             <img src="assets/img/gallery/eyedropper-photos/eyedropper_skeleton_1140x400.png" />
             <p>
-                The challenge with the PCBs was dealing with the limited diameter. This led to the design decision to have two PCBs since there was not any limitation in height. 
+                The challenge with the PCBs was dealing with the limited diameter. This led to the design decision to have two PCBs since there was not any limitation in height.
                 The two PCBs would communicate data back and forth through header connectors that would also give the stacked structure of the PCBs.
             </p>
             <img src="assets/img/gallery/eyedropper-photos/eyedropper_pcb_stacked_1140x400.png" />
             <p>
-                The <b>top PCB</b> contained all the components to properly interface with an <b>nRF51422 BLE microcontroller.</b> A chip antenna and RF components were used to draw out the 
+                The <b>top PCB</b> contained all the components to properly interface with an <b>nRF51422 BLE microcontroller.</b> A chip antenna and RF components were used to draw out the
                 optimal power for wireless communication. Through holes were used to pass wires from the PCB to the top to determine reed switch states.
             </p>
             <p>
                 The <b>bottom PCB</b> contained through holes to use wires and connect the capacitor in the inner sleeve with the <b>FDC1004 capacitance-to-digital converter</b>.
                 The PCB also had the <b>BNO080 Inertial Measurement Unit (IMU) sensor</b>, which captures any change in acceleration and tilt from the eyedropper.
-                A <b>secondary coin cell battery</b> was placed behind, which powered the two PCBs. The bottom PCB also possessed <b>logic to recharge the coin cell battery</b>, 
+                A <b>secondary coin cell battery</b> was placed behind, which powered the two PCBs. The bottom PCB also possessed <b>logic to recharge the coin cell battery</b>,
                 and LEDs to display charge and connection status.
             </p>
             <img src="assets/img/gallery/eyedropper-photos/eyedropper_pcbs_1140x400.png" />
+
+            <h1>Software</h1>
+            <p>
+                The high-level logic for the eyedropper is as follows:
+                <ul class="descSubList">
+                    <li class="description-list">When not connected, the bottle will sit idle and wait to either gather liquid level using the capacitor or advertise and wait for a central device to connect to it</li>
+                    <li class="description-list">When the cap is removed, the high frequency timer is active, and the IMU/capacitance sensors gather data at a faster rate and store it in separate arrays</li>
+                    <li class="description-list">When the cap is back on, the arrays of sensor data are used with a <b>Random Forest Machine Learning Algorithm</b> to determine if the medication has been dispensed</li>
+                    <li class="description-list">If the <b>bottle is not connected to the app</b>, the data (either ML result or fluid level) are <b>stored in non-volatile storage</b></li>
+                    <li class="description-list">If the <b>bottle is connected to the app</b>, the data is <b>sent as a package to the app</b> to be decoded</li>
+                </ul>
+            </p>
+            <img src="assets/img/gallery/eyedropper-photos/eyedropper_prototype_statediagram_1140x500.png" />
+            <br><br>
+            <p>
+                The <b>nRF51422 microcontroller</b> was used to code all the logic to gather sensor data and determine if the eyedropper medication was dispensed. Prior to PCB design,
+                the logic had to be verified using launchpads in order to determine if the sensors were accurate enough to properly detect a use event. Using launchpads and breadboards 
+                to help interface the microcontroller with the sensors helped to determine the correct hardware configuration necessary for the PCB.
+            </p>
+            <p>
+                The code was developed in <b>C using Segger Embedded Studio (official nRF supported IDE).</b> The <b>FreeRTOS</b> library was used since the bottle needed to sit
+                idle until the fluid level and connection status needed to be checked at given intervals. FreeRTOS helped to use the low power timer to wake up the bottle when it was time
+                for an event, thus saving on CPU execution.
+            </p>
         </div>
     </div>
     <!--- Link to the paper --->
