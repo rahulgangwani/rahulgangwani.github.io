@@ -318,7 +318,7 @@ a.back-to-top i {
   height: 40px;
   line-height: 40px;
   color: #fff;
-  background: #50c04c;
+  background: #063779;
   border-radius: 2px;
   text-align: center;
   transition: all 0.2s ease-in-out;
@@ -1289,6 +1289,10 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 /* Footer Area Start */
 .footer-area {
   background: #1C1C20;
+}
+
+.project-footer-padding {
+    padding: 20px 0;
 }
 
 .footer-area .footer-text p {

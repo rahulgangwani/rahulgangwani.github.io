@@ -104,76 +104,180 @@
     </div>
     <div id="content-area" class="description-area">
         <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h1>Overview</h1>
+                    <p>
+                        <b>Glaucoma</b> is the leading cause of irreversible blindness worldwide and the third leading cause of irreversible blindness in the U.S.
+                        With proper adherence monitoring systems, healthcare providers can reach out to patients and remind them to properly take their medication on time.
+                        However, such adherence systems are difficult to develop due to extensive time and costs associated with getting approval from the <b>Food and Drug Administration (FDA)</b>.
+                        This project helps to mitigate these costs by developing a <b>non-invasive protable sensor embedded system that would surround an FDA approved eyedropper medication.</b>
+                    </p>
+                    <img src="assets/img/gallery/eyedropper-photos/eyedropper_overview_1140x400.png"style="max-width:100%" />
+                    <p>
+                        <b>Two PCBs were developed</b>, one stacked on top of the other, and placed inside a slot below the eyedropper bottle. These PCBs contained sensors and a microcontroller
+                        which ran real-time classification algorithms to determine when the eyedropper medication was properly dispensed. Each use event was then sent as a package via BLE to a <b>
+                            Wi-Fi capable
+                            device
+                        </b> which parsed and redirected the packaged data to a web server for proper data logging and feedback.
+                    </p>
+                    <img src="assets/img/gallery/eyedropper-photos/eyedropper_communication_1140x400.png"style="max-width:100%" />
 
-            <h1>Overview</h1>
-            <p>
-                <b>Glaucoma</b> is the leading cause of irreversible blindness worldwide and the third leading cause of irreversible blindness in the U.S.
-                With proper adherence monitoring systems, healthcare providers can reach out to patients and remind them to properly take their medication on time.
-                However, such adherence systems are difficult to develop due to extensive time and costs associated with getting approval from the <b>Food and Drug Administration (FDA)</b>.
-                This project helps to mitigate these costs by developing a <b>non-invasive protable sensor embedded system that would surround an FDA approved eyedropper medication.</b>
-            </p>
-            <img src="assets/img/gallery/eyedropper-photos/eyedropper_overview_1140x400.png" />
-            <p>
-                <b>Two PCBs were developed</b>, one stacked on top of the other, and placed inside a slot below the eyedropper bottle. These PCBs contained sensors and a microcontroller
-                which ran real-time classification algorithms to determine when the eyedropper medication was properly dispensed. Each use event was then sent as a package via BLE to a <b>
-                    Wi-Fi capable
-                    device
-                </b> which parsed and redirected the packaged data to a web server for proper data logging and feedback.
-            </p>
-            <img src="assets/img/gallery/eyedropper-photos/eyedropper_communication_1140x400.png" />
+                    <br />
 
-            <h1>Hardware</h1>
-            <img src="assets/img/gallery/eyedropper-photos/eyedropper_3d_components_1140x400.png" />
-            <p>
-                The <b>skeleton structure (center)</b> was created with just enough circumference to fit an eyedropper bottle. In order to determine fluid level as well as if the bottle
-                has been squeezed, a <b>capacitor is wrapped around the structure</b>. The side of the structure also has openings to feed wires to the top, where it is attached to
-                <b>reed switches</b>. These switches are used with the <b>magnets on the cap (right)</b> to determine when the cap is off. After assembling the PCBs and passing in the wires,
-                a <b>sleeve (left)</b> is placed on top <b>to protect the PCBs from environmental damage</b>.
-            </p>
-            <img src="assets/img/gallery/eyedropper-photos/eyedropper_skeleton_1140x400.png" />
-            <p>
-                The challenge with the PCBs was dealing with the limited diameter. This led to the design decision to have two PCBs since there was not any limitation in height.
-                The two PCBs would communicate data back and forth through header connectors that would also give the stacked structure of the PCBs.
-            </p>
-            <img src="assets/img/gallery/eyedropper-photos/eyedropper_pcb_stacked_1140x400.png" />
-            <p>
-                The <b>top PCB</b> contained all the components to properly interface with an <b>nRF51422 BLE microcontroller.</b> A chip antenna and RF components were used to draw out the
-                optimal power for wireless communication. Through holes were used to pass wires from the PCB to the top to determine reed switch states.
-            </p>
-            <p>
-                The <b>bottom PCB</b> contained through holes to use wires and connect the capacitor in the inner sleeve with the <b>FDC1004 capacitance-to-digital converter</b>.
-                The PCB also had the <b>BNO080 Inertial Measurement Unit (IMU) sensor</b>, which captures any change in acceleration and tilt from the eyedropper.
-                A <b>secondary coin cell battery</b> was placed behind, which powered the two PCBs. The bottom PCB also possessed <b>logic to recharge the coin cell battery</b>,
-                and LEDs to display charge and connection status.
-            </p>
-            <img src="assets/img/gallery/eyedropper-photos/eyedropper_pcbs_1140x400.png" />
+                    <h1>Hardware</h1>
+                    <img src="assets/img/gallery/eyedropper-photos/eyedropper_3d_components_1140x400.png"style="max-width:100%" />
+                    <p>
+                        The <b>skeleton structure (center)</b> was created with just enough circumference to fit an eyedropper bottle. In order to determine fluid level as well as if the bottle
+                        has been squeezed, a <b>capacitor is wrapped around the structure</b>. The side of the structure also has openings to feed wires to the top, where it is attached to
+                        <b>reed switches</b>. These switches are used with the <b>magnets on the cap (right)</b> to determine when the cap is off. After assembling the PCBs and passing in the wires,
+                        a <b>sleeve (left)</b> is placed on top <b>to protect the PCBs from environmental damage</b>.
+                    </p>
+                    <img src="assets/img/gallery/eyedropper-photos/eyedropper_skeleton_1140x400.png"style="max-width:100%" />
+                    <p>
+                        The challenge with the PCBs was dealing with the limited diameter. This led to the design decision to have two PCBs since there was not any limitation in height.
+                        The two PCBs would communicate data back and forth through header connectors that would also give the stacked structure of the PCBs.
+                    </p>
+                    <img src="assets/img/gallery/eyedropper-photos/eyedropper_pcb_stacked_1140x400.png"style="max-width:100%" />
+                    <p>
+                        The <b>top PCB</b> contained all the components to properly interface with an <b>nRF51422 BLE microcontroller.</b> A chip antenna and RF components were used to draw out the
+                        optimal power for wireless communication. Through holes were used to pass wires from the PCB to the top to determine reed switch states.
+                    </p>
+                    <p>
+                        The <b>bottom PCB</b> contained through holes to use wires and connect the capacitor in the inner sleeve with the <b>FDC1004 capacitance-to-digital converter</b>.
+                        The PCB also had the <b>BNO080 Inertial Measurement Unit (IMU) sensor</b>, which captures any change in acceleration and tilt from the eyedropper.
+                        A <b>secondary coin cell battery</b> was placed behind, which powered the two PCBs. The bottom PCB also possessed <b>logic to recharge the coin cell battery</b>,
+                        and LEDs to display charge and connection status.
+                    </p>
+                    <img src="assets/img/gallery/eyedropper-photos/eyedropper_pcbs_1140x400.png"style="max-width:100%" />
 
-            <h1>Software</h1>
-            <p>
-                The high-level logic for the eyedropper is as follows:
-                <ul class="descSubList">
-                    <li class="description-list">When not connected, the bottle will sit idle and wait to either gather liquid level using the capacitor or advertise and wait for a central device to connect to it</li>
-                    <li class="description-list">When the cap is removed, the high frequency timer is active, and the IMU/capacitance sensors gather data at a faster rate and store it in separate arrays</li>
-                    <li class="description-list">When the cap is back on, the arrays of sensor data are used with a <b>Random Forest Machine Learning Algorithm</b> to determine if the medication has been dispensed</li>
-                    <li class="description-list">If the <b>bottle is not connected to the app</b>, the data (either ML result or fluid level) are <b>stored in non-volatile storage</b></li>
-                    <li class="description-list">If the <b>bottle is connected to the app</b>, the data is <b>sent as a package to the app</b> to be decoded</li>
-                </ul>
-            </p>
-            <img src="assets/img/gallery/eyedropper-photos/eyedropper_prototype_statediagram_1140x500.png" />
-            <br><br>
-            <p>
-                The <b>nRF51422 microcontroller</b> was used to code all the logic to gather sensor data and determine if the eyedropper medication was dispensed. Prior to PCB design,
-                the logic had to be verified using launchpads in order to determine if the sensors were accurate enough to properly detect a use event. Using launchpads and breadboards 
-                to help interface the microcontroller with the sensors helped to determine the correct hardware configuration necessary for the PCB.
-            </p>
-            <p>
-                The code was developed in <b>C using Segger Embedded Studio (official nRF supported IDE).</b> The <b>FreeRTOS</b> library was used since the bottle needed to sit
-                idle until the fluid level and connection status needed to be checked at given intervals. FreeRTOS helped to use the low power timer to wake up the bottle when it was time
-                for an event, thus saving on CPU execution.
-            </p>
+                    <br />
+
+                    <h1>Firmware</h1>
+                    <p>
+                        The high-level logic for the eyedropper is as follows:
+                        <ul class="descSubList">
+                            <li class="description-list">When not connected, the bottle will sit idle and wait to either gather liquid level using the capacitor or advertise and wait for a central device to connect to it</li>
+                            <li class="description-list">When the cap is removed, the high frequency timer is active, and the IMU/capacitance sensors gather data at a faster rate and store it in separate arrays</li>
+                            <li class="description-list">When the cap is back on, the arrays of sensor data are used with a <b>Random Forest Machine Learning Algorithm</b> to determine if the medication has been dispensed</li>
+                            <li class="description-list">If the <b>bottle is not connected to the app</b>, the data (either ML result or fluid level) are <b>stored in non-volatile storage</b></li>
+                            <li class="description-list">If the <b>bottle is connected to the app</b>, the data is <b>sent as a package to the app</b> to be decoded</li>
+                        </ul>
+                    </p>
+                    <img src="assets/img/gallery/eyedropper-photos/eyedropper_prototype_statediagram_1140x500.png"style="max-width:100%" />
+                    <br><br>
+                    <p>
+                        The <b>nRF51422 microcontroller</b> was used to code all the logic to gather sensor data and determine if the eyedropper medication was dispensed. Prior to PCB design,
+                        the logic had to be verified using launchpads in order to determine if the sensors were accurate enough to properly detect a use event. Using launchpads and breadboards
+                        to help interface the microcontroller with the sensors helped to determine the correct hardware configuration necessary for the PCB.
+                    </p>
+                    <p>
+                        The code was developed in <b>C using Segger Embedded Studio (official nRF supported IDE).</b> The <b>FreeRTOS</b> library was used since the bottle needed to sit
+                        idle until the fluid level and connection status needed to be checked at given intervals. FreeRTOS helped to use the low power timer to wake up the bottle when it was time
+                        for an event, thus saving on CPU execution.
+                    </p>
+
+                    <br />
+
+                    <h1>Software</h1>
+                    <p>
+                        The iOS app used to connect the bottle to the web server was developed in <b>Swift</b>. The high-level logic for the app is as follows:
+                        <ul class="descSubList">
+                            <li class="description-list">The app starts by scanning for any devices trying to connect via BLE</li>
+                            <li class="description-list">Upon connection, the app moves to its main page where it decodes any incoming BLE data and redirects it to the web server</li>
+                            <li class="description-list">If the server sends a message and the app finds the bottle, the app sends the message via BLE back to the bottle</li>
+                            <li class="description-list">If the server sends a message and the app is not near the bottle, the app stores it in memory until it is close enought to send the message</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <img src="assets/img/gallery/eyedropper-photos/eyedropper_phone_logic_1140x400.png"style="max-width:100%" />
+                        <br />
+                        A version of the app was developed to export and email raw sensor data as an excel sheet. This was because we conducted <b>clinical trials</b> with a bottle
+                        and the app, which was done to gather training data to develop the machine learning algorithm.
+                    </p>
+
+                    <br />
+
+                    <h1>Clinical Trials</h1>
+                    <p>
+                        After setting up a bottle and validating the app can receive raw sensor data, we conducted <b>clinical trials</b> to gather data to be used for machine learning.
+                        The target audience for this system was <b>participants over the age of 65</b>. They performed a series of tasks in a controlled experimental environment, which simulated
+                        how the bottle would be used in a real-world scenario. These tasks included:
+                        <ul class="descSubList">
+                            <li class="description-list">Walking with the bottle in a purse or bag</li>
+                            <li class="description-list">Remove the cap, dispense the eye drops, and then place the cap back on the bottle</li>
+                            <li class="description-list">Remove the cap, place the bottle on the table, and then place the cap on the bottle</li>
+                            <li class="description-list">Shake the bottle for 5 seconds (with the cap still on)</li>
+                            <li class="description-list">Remove the cap, simulate using the eyedropper, but do not squeeze and dispense fluid</li>
+                            <li class="description-list">Remove the cap, sit reclined, dispense the eye drops, and then place the cap back on the bottle</li>
+                        </ul>
+                    </p>
+                    <p>
+                        We used timestamps on the app to record when the bottle was properly taken, and this timestamp was appened to the excel sheet prior to sending it with the raw sensor
+                        readings via email. These csv files were used as training data to create an optimal machine learning algorithm that could properly determine if medication has been
+                        dispensed from the bottle.
+                        <br />
+                        <b>
+                            To comply with University of Michigan protocols, all participants personal IDs remained anonymous, and raw sensor data was
+                            <a href="https://github.com/rahulgangwani/eyedropper_data">published for public use</a>
+                        </b>
+                    </p>
+
+                    <br />
+
+                    <h1>Machine Learning Algorithm</h1>
+                    <p>
+                        The machine learning algorithm was developed using <b>Weka</b>, which used the labeled CSVs from the clinical trials as training data.
+                        Prior to using Weka, the sensor data gathered went through a process known as <b>featurization</b>, to convert it into something meaningful for proper classification.
+                        <br />
+                        Weka then used the data to train and compare the classification performance of different <b>supervised machine learning algorithms</b>. The following plot
+                        which compares the True Positive Rate (TPR) vs False Positive Rate (FPR) shows that <b>Random Forest</b> was the most optimal algorithm.
+                    </p>
+                    <img src="assets/img/gallery/eyedropper-photos/ml_comparisons_1140x400.png"style="max-width:100%" />
+                    <p>
+                        Weka also has an information gained (IG) attribute, which can determine the percentage of total information the model gained by a feature in classifying use events.
+                        <b>This means we can use this information to determine which sensors contribute the most to classification, and which sensors can be removed to further save power.</b>
+                    </p>
+                    <img src="assets/img/gallery/eyedropper-photos/sensors_importance_1140x400.png"style="max-width:100%" />
+
+                    <br />
+
+                    <h1>Acknowledgements</h1>
+                    <p>
+                        Special thanks to <b>Dr. Alanson Sample and the <a href="https://theisclab.com/">ISC Lab</a></b> for help advising the hardware and firmware development of the bottle.
+                        <br />
+                        Special thanks to <b>Dr. Paula Anne Newman-Casey</b> for the initial concepts and innovative ideas, as well as helping with the clinical trials.
+                        <br />
+                        Special thanks to <b>Nolan Blue and Dr. Alex Shorter</b> for their work in developing the mechanical designs and 3D printing the bottle skeleton and sleeve. Credit
+                        also goes to <b>Nolan Blue</b> for helping prototype the sensors and working on parts of the paper.
+                    </p>
+                    <br /><br /><br />
+                </div>
+            </div>
         </div>
     </div>
-    <!--- Link to the paper --->
+    <!-- Footer Section Start -->
+    <footer class="footer-area project-footer-padding fixed-bottom"style="background: #1c1c20d1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.3s">
+                        <ul class="social-icon">
+                            <li>
+                                <a class="paper" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7219493/"><i class="icon-doc"></i></a>
+                            </li>
+                            <li>
+                                <a class="home" href="javascript:history.back()"><i class="icon-home"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="back-to-top">
+            <i class="icon-arrow-up"></i>
+        </a>
+    </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="assets/js/jquery-min.js"></script>
     <script src="assets/js/popper.min.js"></script>
