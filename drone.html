@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Scaling for mobile devices -->
+    <!--    <title>MeetMe - Resume Website Template</title>-->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome.min.css">
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/simple-line-icons.css">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slicknav.css">
+    <!-- Menu CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/menu_sideslide.css">
+    <!-- Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slide-style.css">
+    <!-- Nivo Lightbox -->
+    <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css">
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="../meet-me-opl/assets/css/main.css">
+
+</head>
+<body>
+    <!--- Header for each project --->
+    <div id="project-area" class="project-area-bg">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 text-center">
+                    <div class="contents">
+                        <h5 class="script-font wow fadeInUp" data-wow-delay="0.4s">Smart Pipes for Automated Water Drain</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--- Project image: Might do a slideshow? --->
+    <div class="container">
+        <div class="row">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="assets/img/gallery/drone-photos/Drone_BlockDiagram_1140x400.png" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Block Diagram</h5>
+                            <p>Header pins to travel to motor drivers on the drone. WiFi and GPS chips are used for location targeting and communicating with the app on drink order.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/gallery/drone-photos/drone_order_receive_1140x400.png" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>App Interface</h5>
+                            <p>The app adds the drink order and drone ID and sends the command. Drone displays what drink was requested to be loaded to the servo arms</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/gallery/drone-photos/Drone_CAD_1140x400.png" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>CAD Design</h5>
+                            <p>Drone frame and claws designed and 3D Printed. PCB would fit in rectangular slot. Claws would hold drink as drone flies to target location.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/gallery/drone-photos/Drone_SecuredFrame_1140x400.png" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Final Package</h5>
+                            <p>Drone had separate battery to control motors. PCB used 9V battery for power management, held in a separate compartment.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="content-area" class="description-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h1>Overview</h1>
+                    <img src="assets/img/gallery/drone-photos/drone_flying_1140x400.gif" style="max-width:100%" />
+                    <p>
+                        <b>The following project was done as part of the senior design course, ECE 477, offered at Purdue University, West Lafayette.</b>
+                    </p>
+                    <br />
+
+                    <p>
+                        This project is a <b>drone that receives drink requests form users</b> through an app interface and <b>delivers the selected beverage</b> to the user through
+                        <b>GPS naviation</b>. When desiging this system, our intended use case would be out in a golf course. The idea would be for users playing golf to send a request
+                        using their phones when they got thirsty. A bartender at a clubhouse would receive the request, load the beverage, and send the drone for delivery.
+                    </p>
+
+                    <br />
+
+                    <h1>Hardware</h1>
+                    <p>
+                        The PCB was designed using <b>Eagle</b> and was used to interface with the drone's motor controls as well as other peripherals such as WiFi, GPS, and LCD display.
+                    </p>
+                    <img src="assets/img/gallery/drone-photos/Drone_BlockDiagram_1140x400.png" style="max-width:100%" />
+                    <p>
+                        The <b>Microcontroller</b> chosen was the <b>STM32F476VGT6</b> with an <b>ARM Cortex M4 processor</b>. We wanted to ensure that we had enough PWM signals to
+                        drive the drone motors as well as <b>floating point support</b> to use target GPS coordinates in order to create <b>efficient path finding algorithms</b>
+                    </p>
+                    <p>
+                        The <b>ESP8266 WiFi chip</b> was used to receive the drink requested and target GPS coordinates from the app, as well as acknowledge the request and
+                        send responses back to the users.
+                    </p>
+                    <p>
+                        The <b>speaker</b> circuit was included to alert the bartender when a drink request came in. The <b>LCD</b> would then display the order. The bartender would put
+                        the drink near the claws and attach it with a parachute.
+                    </p>
+                    <p>
+                        The <b>push button</b> was used to latch the beverage to the claws. The latching process involved using <b>PWM to toggle two servos</b> in opposite directions. The push button
+                        was then used again to initiate the launch sequence of the drone to deliver the beverage.
+                    </p>
+                    <p>
+                        The <b>Adafruit Ultimate GPS Breakout board</b> was used to send the drone's current GPS coordinates to the microcontroller. The GPS module would continuously do this
+                        while the drone was in flight to make sure it was going in the right direction to the target location
+                    </p>
+                    <img src="assets/img/gallery/drone-photos/PCB_1140x400.png" style="max-width:100%" />
+                    <img src="assets/img/gallery/drone-photos/pcb_with_wires_1140x400.png" style="max-width:100%" />
+                    <br /><br />
+
+                    <h1>Software</h1>
+                    <p>
+                        Prior to PCB design, prototyping was done using the STM32F4 discovery board. To ease in the development of the peripheral configurations, we took advantage of
+                        STMicroelectronics' <b>Hardware Abstraction Library (HAL)</b>.
+                    </p>
+                    <img src="assets/img/gallery/drone-photos/STM32_HAL_1140x400.png" style="max-width:100%" />
+                    <br /><br />
+                    <p>
+                        For WiFi development, we used a <b>USB-to-FTDI converter to program the ESP8266 using the Arduino IDE</b>. The code programmed into the ESP module was set to connect
+                        to a specific network and listen for any events. When the app sends a command, the <b>ESP parses the package and sends via UART</b> the drink and GPS coordinates to the
+                        STM32.
+                    </p>
+                    <img src="assets/img/gallery/drone-photos/esp32_setup_1140x400.png" style="max-width:100%" />
+                    <p>
+                        The flight controller used for autonomous control was the <b>Naza M Lite Flight Controller</b>. We used PWM signals to control the X and Y motor drivers and fly
+                        the drone. Since this was a course project and we were limited in time, we chose to <b>implement a path finding algorithm that searched X before Y</b>. This meant we
+                        kept driving the X motor until the currrent GPS X coordinate matched the target X coordinate. Once that matched, we repeated the same with Y.
+                    </p>
+                    <p>
+                        When the drone reaches the target location, it hovers to just 10 feet above the ground, and opens the claws to let the drink fall with the parachute. The drone then
+                        goes back to base location.
+                    </p>
+                    <img src="assets/img/gallery/drone-photos/Drone_pathfinder_algorithm_1140x400.png" style="max-width:100%" />
+                    <br /><br />
+
+                    <h1>Demo</h1>
+                    <p>
+                        As part of the senior design course requirement, we demoed our project at the <b>Purdue ECE Spark Challenge</b>.
+                    </p>
+                    <img src="assets/img/gallery/drone-photos/sparkchallenge_1140x400.png" style="max-width:100%" />
+                    <br /><br />
+                    <p>
+                        While there isn't video footage from the demo showing the drone go through the full process, the <b>following video below shows segments of each part of the process</b>:
+                    </p>
+                    <iframe width="1140" height="500" src="https://www.youtube.com/embed/lOdgJBO6tD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="max-width: 100%"></iframe>
+                    <br /><br />
+
+                    <h1>Acknowledgements</h1>
+                    <p>
+                        This work was done with the help of my fellow teammates: <b>Justin Seeke, Thomas Bosler, and Imad Sheriff</b>
+                    </p>
+                    <br /><br /><br />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section Start -->
+    <footer class="footer-area project-footer-padding fixed-bottom"style="background: #1c1c20d1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.3s">
+                        <ul class="social-icon">
+                            <li>
+                                <a class="home" href="javascript:history.back()"><i class="icon-home"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="back-to-top">
+            <i class="icon-arrow-up"></i>
+        </a>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.mixitup.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/jquery.nav.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/nivo-lightbox.js"></script>
+    <script src="assets/js/jquery.slicknav.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/form-validator.min.js"></script>
+    <script src="assets/js/contact-form-script.min.js"></script>
+    <script src="assets/js/map.js"></script>
+
+</body>
+</html> 
